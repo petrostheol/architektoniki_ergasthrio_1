@@ -1,24 +1,24 @@
-#Petros Theologou Alexandros Barboutis
+# Petros Theologou Alexandros Barboutis
 
-##System:
+## System:
 1. CPU: Minor 
 2. Frequency: 1000000000000
 3. Caches: 64
 4. Memory: 2283336
 
-##config.ini:
+## config.ini:
 type=MinorCPU
 clk_gate_max=1000000000000
 block_size=64
 mem_ranges=0:2147483648
 
-##config.json: 
+## config.json: 
 "type": "MinorCPU",
 "clk_gate_max": 1000000000000,
 "block_size": 64,
 "mem_ranges": ["0:2147483648"],
 
-##Diffrentcpumodes:
+## Diffrentcpumodes:
 SimpeCPU:
 
 The SimpleCPU is a purely functional, in-order model that is suited for cases where a detailed model is not necessary. This can include warm-up periods, client systems that are driving a host, or just testing to make sure a program works.
@@ -38,32 +38,32 @@ Minor CPU Model:
 
 Minor is an in-order processor model with a fixed pipeline but configurable data structures and execute behaviour. It is intended to be used to model processors with strict in-order execution behaviour and allows visualisation of an instruction’s position in the pipeline through the MinorTrace/minorview.py format/tool. The intention is to provide a framework for micro-architecturally correlating the model with a particular, chosen processor with similar capabilities.
 
-##TimingSimpleCPU:
+## TimingSimpleCPU:
 1. CPU:	TimingSimpleCPU
 2. Frequency: 1000000000000
 3. Caches: 64
 4. Memory: 704704
 
-##MinorCPU: 
+## MinorCPU: 
 1. CPU: MinorCPU
 2. Frequency: 1000000000000
 3. Caches: 64
 4. Memory: 705988
 
-##Different Frequency:
-###TimingSimpleCPU:
+## Different Frequency:
+### TimingSimpleCPU:
 1. CPU:	TimingSimpleCPU
 2. Frequency: 1000000000000
 3. Caches: 64
 4. Memory: 704708
 
-###MinorCPU:
+### MinorCPU:
 1. CPU:	MinorCPU
 2. Frequency: 1000000000000
 3. Caches: 64
 4. Memory: 705984
 
-##Διαφορές
+## Διαφορές
 Τρέχοντας τα δύο προγράμματα και μετά απά σύγκριση των χρόνων που έκανε κάθε επεξεργαστής για να τρέξει το τελευταίο πρόγραμμα παρητηρήσαμε ότι πάντα ο MinorCPU ήταν αρκετά γρηγορότερος από τον TimingSimpleCPU. Αφού μελετήσαμε την πρακτικότητα του κάθε επεξεργαστή φθάσαμε στο συμπέρασμα οτι ο TimingSimpleCPU εφόσον έχει σχεδιαστεί περισσότερο για να τεστάρουμε εάν τρέχει ένα πρόγραμμα η γενικά το simulation θεωρήσαμε ότι θα πρέπει να αντιστοιχεί σε έναν πολύ απλό επεξεργαστή. Αντιθέτως ο MinorCPU αναφέρεται ότι έχει σχεδιαστεί έτσι ώστε το μοντέλο να σχετίζεται με ένα συγκεκριμένο πραγματικό επεξεργαστή δηλαδή να ανταποκρίνεται άμεσα στην πραγματικότητα. Επομένως καταλήξαμε στο συμπέρασμα ότι εφόσον ο MinorCPU ανταποκρίνεται με σημερινούς προηγμένους και πολύπλοκους επεξεργαστές ίσως για αυτό είναι συγκριτικά γρηγορότερος από τον TimingSimpleCPU. Αυτό επίσης επαληθεύεται από το γεγονός ότι όταν βάλαμε την συχνότητα μνήμης DDR4 που είναι η πιο προηγμένη σήμερα βελτιώνει αντιστοίχως σε ένα μικρό βαθμό και τους δύο επεξεργαστές. Παρακάτω αναγράφονται οι χρόνοι λειτουργίας:
 
 1. MinorCPU: 38505000
